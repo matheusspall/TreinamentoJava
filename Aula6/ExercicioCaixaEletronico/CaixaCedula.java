@@ -20,4 +20,20 @@ public class CaixaCedula {
     public void setQtdCedula(int qtdCedula) {
         this.qtdCedula = qtdCedula;
     }
+    
+    public int getValorTotal(){
+        return (getQtdCedula() * (getCedula().getValor()));
+    }
+    
+    public void addCedula(int qtd){
+        qtdCedula += qtd;
+    }
+    
+    public void addCedula(){
+        qtdCedula++;
+    }
+    
+    public void removeCedula(){
+        qtdCedula--;
+    }
 }

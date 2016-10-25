@@ -74,25 +74,20 @@ public class Banco {
                             switch (operacaoAdm) {
                                 case 1:
                                     System.out.print("Qtd. de Cedula 50 : ");
-                                    caixaEle.getListaCaixaEle().get(0).setQtdCedula(
-                                            caixaEle.getListaCaixaEle().get(0).getQtdCedula() + scanner.nextInt()
-                                    );
+                                    caixaEle.getListaCaixaEle().get(0).addCedula(scanner.nextInt());
+                                            
                                     System.out.print("Qtd. de Cedula 20 : ");
-                                    caixaEle.getListaCaixaEle().get(1).setQtdCedula(
-                                            caixaEle.getListaCaixaEle().get(1).getQtdCedula() + scanner.nextInt()
-                                    );
+                                    caixaEle.getListaCaixaEle().get(1).addCedula(scanner.nextInt());
+                                    
                                     System.out.print("Qtd. de Cedula 10 : ");
-                                    caixaEle.getListaCaixaEle().get(2).setQtdCedula(
-                                            caixaEle.getListaCaixaEle().get(2).getQtdCedula() + scanner.nextInt()
-                                    );
+                                    caixaEle.getListaCaixaEle().get(2).addCedula(scanner.nextInt());
+                                    
                                     System.out.print("Qtd. de Cedula 5 : ");
-                                    caixaEle.getListaCaixaEle().get(3).setQtdCedula(
-                                            caixaEle.getListaCaixaEle().get(3).getQtdCedula() + scanner.nextInt()
-                                    );
+                                    caixaEle.getListaCaixaEle().get(3).addCedula(scanner.nextInt());
+                                    
                                     System.out.print("Qtd. de Cedula 2 : ");
-                                    caixaEle.getListaCaixaEle().get(4).setQtdCedula(
-                                            caixaEle.getListaCaixaEle().get(4).getQtdCedula() + scanner.nextInt()
-                                    );
+                                    caixaEle.getListaCaixaEle().get(4).addCedula(scanner.nextInt());
+                                    
                                     System.out.println("\nReposicao concluida com sucesso.\n");
                                     break;
                                 case 2:
@@ -129,8 +124,6 @@ public class Banco {
                                     int valorSaque = scanner.nextInt();
 
                                     System.out.println(caixaEle.efetuarSaque(valorSaque));
-                                    
-                                    System.out.println("\nRetire seu dinheiro.\n");
                                 }else{
                                     System.out.println("Desculpe, nao ha cedulas disponiveis!");
                                 }
