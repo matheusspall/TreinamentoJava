@@ -1,5 +1,10 @@
 package Aula6.ExercicioCaixaEletronico;
 
+import Aula6.ExercicioCaixaEletronico.Cedula.CaixaCedula;
+import Aula6.ExercicioCaixaEletronico.CaixaEletronico.CaixaEletronico;
+import Aula6.ExercicioCaixaEletronico.Pessoas.Funcionario;
+import Aula6.ExercicioCaixaEletronico.Pessoas.Cliente;
+import Aula6.ExercicioCaixaEletronico.Cedula.Cedula;
 import java.util.Scanner;
 
 public class Banco {

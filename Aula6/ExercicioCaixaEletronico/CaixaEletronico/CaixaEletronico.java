@@ -1,5 +1,6 @@
-package Aula6.ExercicioCaixaEletronico;
+package Aula6.ExercicioCaixaEletronico.CaixaEletronico;
 
+import Aula6.ExercicioCaixaEletronico.Cedula.CaixaCedula;
 import java.util.ArrayList;
 
 public class CaixaEletronico {

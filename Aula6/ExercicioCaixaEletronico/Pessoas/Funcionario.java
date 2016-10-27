@@ -1,4 +1,4 @@
-package Aula6.ExercicioCaixaEletronico;
+package Aula6.ExercicioCaixaEletronico.Pessoas;
 
 public class Funcionario {
 
