@@ -1,5 +1,6 @@
-package br.com.meta.aula10.exercicio1;
+package br.com.meta.aula10.exercicio1.contato;
 
+import br.com.meta.aula10.exercicio1.contato.Contato;
 import java.util.ArrayList;
 
 public class Agenda {
@@ -25,7 +26,7 @@ public class Agenda {
 
     public Contato pesquisarPorNome(String nome) {
         for (Contato contato : agenda) {
-            if (contato.getNome().equals(nome)) {
+            if (contato.getNome().contains(nome)) {
                 return contato;
             }
         }

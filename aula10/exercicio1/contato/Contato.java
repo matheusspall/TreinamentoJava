@@ -1,4 +1,4 @@
-package br.com.meta.aula10.exercicio1;
+package br.com.meta.aula10.exercicio1.contato;
 
 public class Contato {
     private String nome;

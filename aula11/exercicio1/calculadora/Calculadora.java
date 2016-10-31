@@ -1,4 +1,4 @@
-package br.com.meta.aula11.exercicio1;
+package br.com.meta.aula11.exercicio1.calculadora;
 
 public abstract class Calculadora {
 

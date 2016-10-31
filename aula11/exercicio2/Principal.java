@@ -1,5 +1,7 @@
 package br.com.meta.aula11.exercicio2;
 
+import br.com.meta.aula11.exercicio2.pessoa.Mulher;
+import br.com.meta.aula11.exercicio2.pessoa.Homem;
 import java.util.Scanner;
 
 public class Principal {

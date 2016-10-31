@@ -1,4 +1,4 @@
-package br.com.meta.aula11.exercicio2;
+package br.com.meta.aula11.exercicio2.pessoa;
 
 public class Homem extends PessoaIMC{
 

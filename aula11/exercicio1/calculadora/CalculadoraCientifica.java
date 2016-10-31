@@ -1,4 +1,6 @@
-package br.com.meta.aula11.exercicio1;
+package br.com.meta.aula11.exercicio1.calculadora;
+
+import br.com.meta.aula11.exercicio1.calculadora.Calculadora;
 
 public class CalculadoraCientifica extends Calculadora{
 

@@ -1,5 +1,7 @@
 package br.com.meta.aula11.exercicio1;
 
+import br.com.meta.aula11.exercicio1.calculadora.CalculadoraCientifica;
+
 public class Principal {
     public static void main(String[] args) {
         CalculadoraCientifica cc = new CalculadoraCientifica();

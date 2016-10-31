@@ -1,5 +1,7 @@
 package br.com.meta.aula10.exercicio1;
 
+import br.com.meta.aula10.exercicio1.contato.Agenda;
+import br.com.meta.aula10.exercicio1.contato.Contato;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
