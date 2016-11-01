@@ -1,4 +1,4 @@
-package Aula6.ExercicioCaixaEletronico.Cedula;
+package br.com.meta.aula6.exerciciocaixaeletronico.cedula;
 
 public class Cedula {
     private int valor;

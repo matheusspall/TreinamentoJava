@@ -1,6 +1,4 @@
-package Aula6.ExercicioCaixaEletronico.Cedula;
-
-import Aula6.ExercicioCaixaEletronico.Cedula.Cedula;
+package br.com.meta.aula6.exerciciocaixaeletronico.cedula;
 
 public class CaixaCedula {
 
