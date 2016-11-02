@@ -8,7 +8,6 @@ import br.com.meta.aula6.exerciciocaixaeletronico.caixaeletronico.CaixaEletronic
 import br.com.meta.aula6.exerciciocaixaeletronico.pessoas.Funcionario;
 import br.com.meta.aula6.exerciciocaixaeletronico.pessoas.Cliente;
 import java.util.Scanner;
-import javax.swing.text.html.HTML;
 
 public class Principal {
 
@@ -34,6 +33,7 @@ public class Principal {
 
             switch (operacao) {
                 case 1: //ADM
+                    scanner.nextLine();
                     System.out.print("Login: ");
                     String login = scanner.nextLine();
                     
@@ -42,7 +42,7 @@ public class Principal {
 
                     Funcionario funcionario = banco.validarFuncionario(login, senha);
 
-                    if (true) {
+                    if (!funcionario.equals(null)) {
                         ADM: //etiqueta de bloco
                         while (true) {
                             System.out.print("\nVoce esta conectado como administrador do sistema!"

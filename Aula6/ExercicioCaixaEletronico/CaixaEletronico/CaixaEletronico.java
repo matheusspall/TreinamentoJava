@@ -92,10 +92,13 @@ public class CaixaEletronico {
         String cedulasRetiradas = "";
         int qtd50 = 0, qtd20 = 0, qtd10 = 0, qtd5 = 0, qtd2 = 0;
 
+        SAQUE: //etiqueta de bloco
         if (validarSaque(valor)) {
             if (valor <= getTotalDinheiro()) {
                 while (valor > 0) {
-                    if (valor % 2 == 1) {
+                    if (valor % 2 == 1 && listaCedulas.get(3).getQtdCedula() == 0) { //valor impar && qtdCedula 5 = 0
+                        break SAQUE;
+                    } else if (valor % 2 == 1 && listaCedulas.get(3).getQtdCedula() > 0) { //valor impar && qtdCedula 5 > 0
                         listaCedulas.get(3).removeCedula(); //cedula 5
                         valor -= listaCedulas.get(3).getCedula().getValor(); //valor = valor - 5
                         qtd5++;
@@ -266,6 +269,7 @@ public class CaixaEletronico {
         } else {
             return "Valor informado nao pode ser sacado.";
         }
+        return "Valor informado nao pode ser sacado.";
     }
 
     public void adicionarCaixaCedula(CaixaCedula caixa) {
@@ -287,22 +291,22 @@ public class CaixaEletronico {
     public void setListaMovimentacao(ArrayList<Movimentacao> listaMovimentacao) {
         this.listaMovimentacao = listaMovimentacao;
     }
-    
-    public void addMovimentacao(Movimentacao movimentacao){
+
+    public void addMovimentacao(Movimentacao movimentacao) {
         listaMovimentacao.add(movimentacao);
     }
-    
-    public String getMovimentacaoConta(Conta conta){
+
+    public String getMovimentacaoConta(Conta conta) {
         String resultado = "";
-        
-        for(Movimentacao movimentacao : listaMovimentacao){
-            if(movimentacao.getConta().equals(conta)){
+
+        for (Movimentacao movimentacao : listaMovimentacao) {
+            if (movimentacao.getConta().equals(conta)) {
                 resultado += "\nData: " + movimentacao.getData() + ""
                         + "\nTipo: " + movimentacao.getTipoOperacao() + ""
                         + "\nValor: " + movimentacao.getValor();
             }
         }
         return resultado;
-        
+
     }
 }
