@@ -17,6 +17,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        int opPrincipal = 0, operacaoAdm = 0;
+
         input = new Scanner(System.in);
 
         Banco banco = new Banco();
@@ -28,7 +30,6 @@ public class Main {
 
         SISTEMA:
         for (;;) {
-            System.out.println(LimparConsole.limparConsole());
             System.out.println(" ______________________");
             System.out.println("|                      | ");
             System.out.println("|   ESCOLHA UMA OPCAO  | ");
@@ -37,8 +38,14 @@ public class Main {
                     + "\n(2) Cliente:"
                     + "\n(3) Sair"
                     + "\nOpcao:");
-            int opPrincipal = input.nextInt();
-            input.nextLine();
+            try {
+                opPrincipal = input.nextInt();
+            } catch (Exception e) {
+                opPrincipal = 0;
+                System.out.println(e.getMessage());
+            } finally {
+                input.nextLine(); //limpar buffer
+            }
 
             switch (opPrincipal) {
 
@@ -55,6 +62,7 @@ public class Main {
                     if (funcionario != null) {
                         System.out.println(LimparConsole.limparConsole());
                         Conta conta = new Conta(999, 999, "123");
+                        
                         ADM: //etiqueta de bloco
                         while (true) {
                             System.out.println(" ______________________");
@@ -70,7 +78,13 @@ public class Main {
                                     + "\n(5) Aprovacao de depositos"
                                     + "\n(99) Logoff"
                                     + "\nOperacao: ");
-                            int operacaoAdm = input.nextInt();
+                            try {
+                                operacaoAdm = input.nextInt();
+                            } catch (Exception e) {
+                                operacaoAdm = 0;
+                            } finally {
+                                input.nextLine(); //limpar o buffer
+                            }
 
                             switch (operacaoAdm) {
                                 case 1: //REPOR CEDULAS
@@ -78,19 +92,49 @@ public class Main {
                                     int totalCaixaAntes = caixa.getTotalDinheiro();
 
                                     System.out.print("Qtd. de Cedula 50 : ");
-                                    caixa.getListaCaixaEle().get(0).addCedula(input.nextInt());
+                                    try {
+                                        caixa.getListaCaixaEle().get(0).addCedula(input.nextInt());
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine(); //limpar o buffer
+                                    }
 
                                     System.out.print("Qtd. de Cedula 20 : ");
-                                    caixa.getListaCaixaEle().get(1).addCedula(input.nextInt());
+                                    try {
+                                        caixa.getListaCaixaEle().get(1).addCedula(input.nextInt());
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine(); //limpar o buffer
+                                    }
 
                                     System.out.print("Qtd. de Cedula 10 : ");
-                                    caixa.getListaCaixaEle().get(2).addCedula(input.nextInt());
+                                    try {
+                                        caixa.getListaCaixaEle().get(2).addCedula(input.nextInt());
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine(); //limpar o buffer
+                                    }
 
                                     System.out.print("Qtd. de Cedula 5 : ");
-                                    caixa.getListaCaixaEle().get(3).addCedula(input.nextInt());
+                                    try {
+                                        caixa.getListaCaixaEle().get(3).addCedula(input.nextInt());
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine(); //limpar o buffer
+                                    }
 
                                     System.out.print("Qtd. de Cedula 2 : ");
-                                    caixa.getListaCaixaEle().get(4).addCedula(input.nextInt());
+                                    try {
+                                        caixa.getListaCaixaEle().get(4).addCedula(input.nextInt());
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine(); //limpar o buffer
+                                    }
 
                                     int totalCaixaDepois = caixa.getTotalDinheiro();
 
@@ -157,15 +201,31 @@ public class Main {
                 }
 
                 case 2: { //CLIENTE
+                    int agencia = 0,
+                            conta = 0,
+                            operacaoCliente = 0,
+                            valorSaque = 0,
+                            valorDeposito = 0;
 
                     System.out.println(LimparConsole.limparConsole());
 
                     System.out.print("AG: ");
-                    int agencia = input.nextInt();
+                    try {
+                        agencia = input.nextInt();
+                    } catch (Exception e) {
+
+                    } finally {
+                        input.nextLine(); //limpar o buffer
+                    }
 
                     System.out.print("Conta: ");
-                    int conta = input.nextInt();
-                    input.nextLine();
+                    try {
+                        conta = input.nextInt();
+                    } catch (Exception e) {
+
+                    } finally {
+                        input.nextLine(); //limpar o buffer
+                    }
 
                     System.out.print("Senha: ");
                     String senha = input.nextLine();
@@ -189,7 +249,13 @@ public class Main {
                                     + "\n(4) Deposito"
                                     + "\n(99) Voltar ao Menu Principal"
                                     + "\nOperacao: ");
-                            int operacaoCliente = input.nextInt();
+                            try {
+                                operacaoCliente = input.nextInt();
+                            } catch (Exception e) {
+                                operacaoCliente = 0;
+                            } finally {
+                                input.nextLine(); //limpar o buffer
+                            }
 
                             switch (operacaoCliente) {
                                 case 1: //SAQUE
@@ -198,7 +264,14 @@ public class Main {
 
                                         System.out.println("Cedulas disponiveis: " + caixa.cedulasDisponiveis());
                                         System.out.print("\nInforme o valor que deseja sacar: ");
-                                        int valorSaque = input.nextInt();
+                                        try {
+                                            valorSaque = input.nextInt();
+                                        } catch (Exception e) {
+
+                                        } finally {
+                                            input.nextLine(); //limpar o buffer
+                                        }
+
                                         if (cliente.getConta().getSaldo() > valorSaque) {
                                             String resultado = caixa.efetuarSaque(valorSaque);
                                             if (resultado.equals("Valor informado maior que o disponivel.")
@@ -210,10 +283,12 @@ public class Main {
                                                 caixa.addMovimentacao(new Movimentacao("Saque", Data.getDataAtual(), valorSaque, cliente.getConta()));
                                             }
                                         } else {
+                                            System.out.println(LimparConsole.limparConsole());
                                             System.out.println("Valor informado maior que o disponivel na conta.");
                                         }
 
                                     } else {
+                                        System.out.println(LimparConsole.limparConsole());
                                         System.out.println("Desculpe, nao ha cedulas disponiveis!");
                                     }
                                     break;
@@ -228,7 +303,7 @@ public class Main {
                                     System.out.println(LimparConsole.limparConsole());
                                     input.nextLine(); //esvaziar o buffer
                                     System.out.println("Movimentacao:\n" + caixa.getMovimentacaoConta(cliente.getConta()));
-                                    
+
                                     if (caixa.getMovimentacaoConta(cliente.getConta()) != null) {
                                         System.out.println("Deseja gravar em arquivo texto (.txt)? s/n");
                                         if (input.nextLine().equals("s")) {
@@ -236,23 +311,35 @@ public class Main {
                                         } else {
                                             System.out.println(LimparConsole.limparConsole());
                                         }
+                                    } else {
+                                        System.out.println("Nao existe movimentacao nessa conta!");
                                     }
                                     break;
 
                                 case 4: //DEPOSITO
                                     System.out.println(LimparConsole.limparConsole());
                                     System.out.print("Informe o valor que deseja depositar: ");
-                                    int valorDeposito = input.nextInt();
+                                    try {
+                                        valorDeposito = input.nextInt();
+                                    } catch (Exception e) {
+
+                                    } finally {
+                                        input.nextLine();
+                                    }
+
                                     if (valorDeposito > 0) {
                                         caixa.addMovimentacao(new Movimentacao("Deposito pendente", Data.getDataAtual(), valorDeposito, cliente.getConta()));
                                     }
-                                    System.out.println(LimparConsole.limparConsole());
                                     break;
 
                                 default:
+                                    System.out.println(LimparConsole.limparConsole());
                                     break CLIENTE;
                             }
                         }
+                    } else {
+                        System.out.println(LimparConsole.limparConsole());
+                        System.out.println("Cliente nao encontrado!");
                     }
 
                     break;
@@ -260,8 +347,17 @@ public class Main {
 
                 default: {
                     System.out.println(LimparConsole.limparConsole());
-                    System.out.println("Obrigado por utilizar nosso sistema!");
-                    break SISTEMA;
+                    System.out.print("Deseja encerrar esse programa? (s/n)");
+                    String resposta = input.nextLine();
+                    if (resposta.equals("s")) {
+                        System.out.println(LimparConsole.limparConsole());
+                        System.out.println("\n\n\nObrigado por usar nosso sistema.\n\n\n");
+                        break SISTEMA;
+                    } else {
+                        resposta = "";
+                        System.out.println(LimparConsole.limparConsole());
+                        break;
+                    }
                 }
 
             }
