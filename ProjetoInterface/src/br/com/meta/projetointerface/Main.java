@@ -52,7 +52,13 @@ public class Main {
                         }
                         Jardineiro jardineiro = new Jardineiro(nome, idade);
                         ufsm.setJardineiro(jardineiro);
-                        System.out.println(Limpar.limparConsole());
+                        System.out.println("Jardineiro (a) adicionado com sucesso!");
+                        try {
+                            Thread.sleep(2500);
+                            System.out.println(Limpar.limparConsole());
+                        } catch (InterruptedException ex) {
+
+                        }
                         break;
                     }
                     case 2: { //FAXINEIRA
@@ -69,7 +75,13 @@ public class Main {
                         }
                         IFaxineira faxineira = new FaxineiraCiaDasDiaristas(nome, idade);
                         ufsm.setFaxineira(faxineira);
-                        System.out.println(Limpar.limparConsole());
+                        System.out.println("Faxineiro (a) adicionado com sucesso!");
+                        try {
+                            Thread.sleep(2500);
+                            System.out.println(Limpar.limparConsole());
+                        } catch (InterruptedException ex) {
+
+                        }
                         break;
                     }
                     case 3: { //PROFESSOR
@@ -105,7 +117,13 @@ public class Main {
                                     }
                                     IProfessor dentista = new Dentista(nome, idade);
                                     ufsm.adicionarProfessor(dentista);
-                                    System.out.println(Limpar.limparConsole());
+                                    System.out.println("Professor Dentista adicionado com sucesso!");
+                                    try {
+                                        Thread.sleep(2500);
+                                        System.out.println(Limpar.limparConsole());
+                                    } catch (InterruptedException ex) {
+
+                                    }
                                     break;
                                 }
                                 case 2: { //ADVOGADO
@@ -122,7 +140,13 @@ public class Main {
                                     }
                                     IProfessor advogado = new Advogado(nome, idade);
                                     ufsm.adicionarProfessor(advogado);
-                                    System.out.println(Limpar.limparConsole());
+                                    System.out.println("Professor Advogado adicionado com sucesso!");
+                                    try {
+                                        Thread.sleep(2500);
+                                        System.out.println(Limpar.limparConsole());
+                                    } catch (InterruptedException ex) {
+
+                                    }
                                     break;
                                 }
                                 case 3: { //LISTAR PROFESSORES
@@ -183,8 +207,20 @@ public class Main {
                                     try {
                                         ufsm.getControleAluno().adicionar(new Aluno(nome, email, endereco, bairro, cidade, cep, estado, pais, telefone));
                                         System.out.println("Aluno adicionado com sucesso!");
+                                        try {
+                                            Thread.sleep(2500);
+                                            System.out.println(Limpar.limparConsole());
+                                        } catch (InterruptedException ex) {
+
+                                        }
                                     } catch (NullPointerException e) {
                                         System.out.println("Dados incompletos!");
+                                        try {
+                                            Thread.sleep(2500);
+                                            System.out.println(Limpar.limparConsole());
+                                        } catch (InterruptedException ex) {
+
+                                        }
                                     } catch (Exception ex) {
 
                                     }
@@ -201,6 +237,12 @@ public class Main {
                                         System.out.println("Aluno excluido com sucesso!");
                                     } else {
                                         System.out.println("Nao existe este email cadastrado!");
+                                    }
+                                    try {
+                                        Thread.sleep(2500);
+                                        System.out.println(Limpar.limparConsole());
+                                    } catch (InterruptedException ex) {
+
                                     }
                                     break;
                                 }
@@ -229,58 +271,65 @@ public class Main {
                                         if (!nome.equals("")) {
                                             aluno.setNome(nome);
                                         }
-                                        
+
                                         System.out.print("Email: ");
                                         email = scanner.nextLine();
                                         if (!email.equals("")) {
                                             aluno.setEmail(email);
                                         }
-                                        
+
                                         System.out.print("Endereco: ");
                                         endereco = scanner.nextLine();
-                                        if(!endereco.equals("")){
+                                        if (!endereco.equals("")) {
                                             aluno.setEndereco(endereco);
                                         }
-                                        
+
                                         System.out.print("Bairro: ");
                                         bairro = scanner.nextLine();
-                                        if(!bairro.equals("")){
+                                        if (!bairro.equals("")) {
                                             aluno.setBairro(bairro);
                                         }
-                                        
+
                                         System.out.print("Cidade: ");
                                         cidade = scanner.nextLine();
-                                        if(!cidade.equals("")){
+                                        if (!cidade.equals("")) {
                                             aluno.setCidade(cidade);
                                         }
-                                        
+
                                         System.out.print("CEP: ");
                                         cep = scanner.nextLine();
-                                        if(!cep.equals("")){
+                                        if (!cep.equals("")) {
                                             aluno.setCep(cep);
                                         }
-                                        
+
                                         System.out.print("Estado: ");
                                         estado = scanner.nextLine();
-                                        if(!estado.equals("")){
+                                        if (!estado.equals("")) {
                                             aluno.setEstado(estado);
                                         }
-                                        
+
                                         System.out.print("Pais: ");
                                         pais = scanner.nextLine();
-                                        if(!pais.equals("")){
+                                        if (!pais.equals("")) {
                                             aluno.setPais(pais);
                                         }
-                                        
+
                                         System.out.print("Telefone: ");
                                         telefone = scanner.nextLine();
-                                        if(!telefone.equals("")){
+                                        if (!telefone.equals("")) {
                                             aluno.setTelefone(telefone);
                                         }
-                                        
+
                                         System.out.println("Aluno atualizado com sucesso!");
                                     } else {
                                         System.out.println("Nao existe este email cadastrado!");
+                                    }
+                                    
+                                    try {
+                                        Thread.sleep(2500);
+                                        System.out.println(Limpar.limparConsole());
+                                    } catch (InterruptedException ex) {
+
                                     }
 
                                     break;

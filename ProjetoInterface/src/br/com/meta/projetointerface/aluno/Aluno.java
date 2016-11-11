@@ -26,7 +26,7 @@ public class Aluno {
     }
 
     private void validaDados() throws Exception{
-        if (nome == null || email == null || bairro == null || cidade == null || cep == null || estado == null || pais == null || telefone == null) {
+        if (nome.equals("") || email.equals("") || bairro.equals("") || cidade.equals("") || cep.equals("") || estado.equals("") || pais.equals("") || telefone.equals("")) {
             throw new NullPointerException();
         }
     }
