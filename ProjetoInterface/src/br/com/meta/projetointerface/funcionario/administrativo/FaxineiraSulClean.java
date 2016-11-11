@@ -7,6 +7,11 @@ public class FaxineiraSulClean implements IFaxineira {
     private String nome;
     private int idade;
     
+    public FaxineiraSulClean(String nome, int idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+    
     @Override
     public void varrer() {
         System.out.println("FaxineiraSulClean - Varrer");

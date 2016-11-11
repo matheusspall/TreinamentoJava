@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int op = 0, opProf = 0, opAluno = 0, idade = 0;
+        int op = 0, opProf = 0, opAluno = 0, opFaxineira = 0, idade = 0;
         String nome = null, email = null, endereco = null, bairro = null, cidade = null, cep = null, estado = null, pais = null, telefone = null;
 
         try {
@@ -54,6 +54,7 @@ public class Main {
                         ufsm.setJardineiro(jardineiro);
                         System.out.println("Jardineiro (a) adicionado com sucesso!");
                         try {
+                            System.out.println("Processando...");
                             Thread.sleep(2500);
                             System.out.println(Limpar.limparConsole());
                         } catch (InterruptedException ex) {
@@ -73,10 +74,36 @@ public class Main {
                         } finally {
                             scanner.nextLine(); //esvaziar buffer
                         }
-                        IFaxineira faxineira = new FaxineiraCiaDasDiaristas(nome, idade);
-                        ufsm.setFaxineira(faxineira);
-                        System.out.println("Faxineiro (a) adicionado com sucesso!");
+                        System.out.print("\nEmpresa: "
+                                + "\n1) Cia das diaristas"
+                                + "\n2) Sul Clean"
+                                + "\n99) Voltar"
+                                + "\nOpcao: ");
                         try {
+                            opFaxineira = scanner.nextInt();
+                        } catch (Exception e) {
+                            opFaxineira = 0;
+                        } finally {
+                            scanner.nextLine(); //esvaziar buffer
+                        }
+                        switch (opFaxineira) {
+                            case 1: {
+                                IFaxineira faxineira = new FaxineiraCiaDasDiaristas(nome, idade);
+                                ufsm.setFaxineira(faxineira);
+                                System.out.println("Faxineiro (a) adicionado com sucesso!");
+                                break;
+                            }
+                            case 2: {
+                                IFaxineira faxineira = new FaxineiraSulClean(nome, idade);
+                                ufsm.setFaxineira(faxineira);
+                                System.out.println("Faxineiro (a) adicionado com sucesso!");
+                                break;
+                            }
+                            default: break;
+                        }
+
+                        try {
+                            System.out.println("Processando...");
                             Thread.sleep(2500);
                             System.out.println(Limpar.limparConsole());
                         } catch (InterruptedException ex) {
@@ -119,6 +146,7 @@ public class Main {
                                     ufsm.adicionarProfessor(dentista);
                                     System.out.println("Professor Dentista adicionado com sucesso!");
                                     try {
+                                        System.out.println("Processando...");
                                         Thread.sleep(2500);
                                         System.out.println(Limpar.limparConsole());
                                     } catch (InterruptedException ex) {
@@ -142,6 +170,7 @@ public class Main {
                                     ufsm.adicionarProfessor(advogado);
                                     System.out.println("Professor Advogado adicionado com sucesso!");
                                     try {
+                                        System.out.println("Processando...");
                                         Thread.sleep(2500);
                                         System.out.println(Limpar.limparConsole());
                                     } catch (InterruptedException ex) {
@@ -208,6 +237,7 @@ public class Main {
                                         ufsm.getControleAluno().adicionar(new Aluno(nome, email, endereco, bairro, cidade, cep, estado, pais, telefone));
                                         System.out.println("Aluno adicionado com sucesso!");
                                         try {
+                                            System.out.println("Processando...");
                                             Thread.sleep(2500);
                                             System.out.println(Limpar.limparConsole());
                                         } catch (InterruptedException ex) {
@@ -216,6 +246,7 @@ public class Main {
                                     } catch (NullPointerException e) {
                                         System.out.println("Dados incompletos!");
                                         try {
+                                            System.out.println("Processando...");
                                             Thread.sleep(2500);
                                             System.out.println(Limpar.limparConsole());
                                         } catch (InterruptedException ex) {
@@ -239,6 +270,7 @@ public class Main {
                                         System.out.println("Nao existe este email cadastrado!");
                                     }
                                     try {
+                                        System.out.println("Processando...");
                                         Thread.sleep(2500);
                                         System.out.println(Limpar.limparConsole());
                                     } catch (InterruptedException ex) {
@@ -324,8 +356,9 @@ public class Main {
                                     } else {
                                         System.out.println("Nao existe este email cadastrado!");
                                     }
-                                    
+
                                     try {
+                                        System.out.println("Processando...");
                                         Thread.sleep(2500);
                                         System.out.println(Limpar.limparConsole());
                                     } catch (InterruptedException ex) {
