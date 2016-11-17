@@ -1,0 +1,1 @@
+ALTER TABLE meta.dbo.vinho ADD quantidade INT NULL

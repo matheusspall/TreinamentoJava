@@ -1,0 +1,9 @@
+CREATE PROCEDURE P_LISTAR_VINICOLAS_FUNDACAO AS 
+	SELECT
+		va.nome as vinicola, va.ano_fundacao
+	FROM
+		vinicola va
+	ORDER BY
+		2
+
+EXEC P_LISTAR_VINICOLAS_FUNDACAO

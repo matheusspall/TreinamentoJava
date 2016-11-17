@@ -1,0 +1,7 @@
+CREATE PROCEDURE P_NOME_VINHOS AS 
+	SELECT
+		v.nome as nome_vinho
+	FROM
+		vinho v
+
+EXEC P_NOME_VINHOS
