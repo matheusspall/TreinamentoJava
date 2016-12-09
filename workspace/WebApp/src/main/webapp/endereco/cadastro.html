@@ -1,0 +1,81 @@
+<div>
+	<h3>Cadastro de Endereco</h3>
+	<br>
+</div>
+
+<div class="input-group">
+	<table id="table-dados">
+		<tr>
+			<td>
+				<label>Rua</label> 
+				<input id="rua"
+			   		   type="text" 
+			   		   class="form-control"></input>			
+			</td>
+			<td>
+				<label>Numero</label> 
+				<input id="numero"
+			   		   type="number" 
+			   		   class="form-control"></input>		
+			</td>
+			<td>
+				<label>Bairro</label> 
+				<input id="bairro"
+					   type="text" 
+					   class="form-control"></input>			
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Cidade</label> 
+				<input id="cidade"
+					   type="text" 
+					   class="form-control"></input>
+			</td>
+			<td>
+				<label>Estado</label> 
+				<input id="estado"
+					   type="text" 
+					   class="form-control"></input>	
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>CEP</label> 
+				<input id="cep"
+					   type="number" 
+					   class="form-control"></input>
+			</td>
+			<td>
+				<label>Complemento</label> 
+				<input id="complemento"
+					   type="text" 
+					   class="form-control"></input>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="input-group">
+	<br>
+	<button id="cadastrar" type="button" 
+			onclick="cadastroEndereco()"
+			class="btn btn-default gold">Cadastrar</button>
+</div>
+
+<!-- MODAL PERSONALIZADO -->
+<div id="modal-mensagens" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="modal-title" class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				<label id="modal-mensagem"></label>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>

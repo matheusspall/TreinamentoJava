@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/css/default.css" />
+<title>Locadora</title>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<img src="http://2.bp.blogspot.com/-DuUqNpYzd2U/UE4tkkaUAoI/AAAAAAAAAEQ/d5NGKxCEN4E/s1600/DVD_Shrink.png"
+					 width="60px" height="60px">
+			</div>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="http://localhost:8091/WebApp">Spall Locadora</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="http://localhost:8091/WebApp">Home</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Categoria <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastroCategoria()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarCategoria()"><a href="#">Listar</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Filme<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastrarFilme()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarFilme()"><a href="#">Listar</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Tipo Mídia <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastroTipoMidia()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarTipoMidia()"><a href="#">Listar</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Usuário <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastroUsuario()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarUsuario()"><a href="#">Listar</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Mídia <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastroMidia()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarMidia()"><a href="#">Listar</a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Locação <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li onclick="abrirTelaCadastroLocacao()"><a href="#">Cadastrar</a></li>
+						<li onclick="abrirTelaListarLocacao()"><a href="#">Listar</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="conteudo-principal">
+		<h4>
+			Mas que barbaridade tchê... Seja bem-vindo à Spall Locadora, a mais bem conceituada locadora de filmes da região!
+		</h4>
+	</div>
+
+	<script src="resources/js/jquery.min.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/categoria.js"></script>
+	<script src="resources/js/endereco.js"></script>
+	<script src="resources/js/filme.js"></script>
+	<script src="resources/js/tipoMidia.js"></script>
+	<script src="resources/js/usuario.js"></script>
+	<script src="resources/js/midia.js"></script>
+	<script src="resources/js/locacao.js"></script>
+	<script src="resources/js/default.js"></script>
+
+</body>
+</html>

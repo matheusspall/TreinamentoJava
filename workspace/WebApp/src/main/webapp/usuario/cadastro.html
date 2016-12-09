@@ -1,0 +1,119 @@
+<div>
+	<h3>Cadastro de Usuario</h3>
+</div>
+
+<div class="input-group">
+	
+	<div>
+		<label class = "radio-inline">
+			<input type = "radio" 
+				   name = "tipo-usuario" 
+				   value = "0" 
+				   checked="checked"
+				   onchange="mudarTipoUsuario()">Cliente
+		</label>
+		<label class = "radio-inline">
+			<input type = "radio" 
+				   name = "tipo-usuario" 
+				   value = "1" 
+				   onchange="mudarTipoUsuario()">Funcionario
+		</label>
+	</div>	
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-8">
+			<label>Nome</label> 
+			<input id="nome"
+				   type="text"
+			   	   class="form-control"></input>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<label>Celular</label>
+			<input id="celular"
+				   type="number"
+				   class="form-control"></input>		
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<label>Email</label>
+				<input id="email"
+					   type="text"
+					   class="form-control"></input>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<label>Endereco</label>
+				<select id = "endereco-usuario"
+						class = "form-control">
+				
+				</select>		
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-12">
+			<button id = "cadastrar-novo-endereco"
+					type = "button"
+					class = "btn btn-default gold"
+					onclick = "abrirTelaCadastroEndereco()">Novo Endereco</button>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-3">
+			<label id="lab-login"
+				   style="display:none">Login</label>
+			<input id="login"
+				   type="text"
+				   class = "form-control"
+				   style="display:none">
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<label id="lab-senha"
+				   style="display:none">Senha</label>
+			<input id="senha"
+				   type="text"
+				   class = "form-control"
+				   style="display:none">
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<label id="lab-salario"
+				   style="display:none">Salario</label>
+			<input id="salario"
+				   type="number"
+				   class = "form-control"
+				   style="display:none">
+		</div>
+	</div>
+</div>
+
+<div class="input-group">
+	<br>
+	<button id="cadastrar" 
+			type="button" 
+			class="btn btn-default gold"
+			onclick="cadastrarUsuario()">Cadastrar</button>
+</div>
+
+<!-- MODAL PERSONALIZADO -->
+<div id="modal-mensagens" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="modal-title" class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				<label id="modal-mensagem"></label>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="resources/js/endereco.js"></script>

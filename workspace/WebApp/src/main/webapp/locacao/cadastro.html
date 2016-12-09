@@ -1,0 +1,98 @@
+<div>
+	<h3>Cadastro de Locacao</h3>
+	<br>
+</div>
+
+<div class="input-group">
+
+	<table id="table-dados">
+		<tr>
+			<td>
+				<label>Filme</label> 
+				<select id="cod-midia"
+						class="form-control">
+				
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Funcionario</label>
+				<select id = "funcionario"
+						class = "form-control">
+					
+				</select>
+			</td>
+			<td>
+				<label>Cliente</label>
+				<select id = "cliente"
+						class = "form-control">
+					
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Data do Emprestimo</label>
+				<input id="dataEmprestimo"
+					   type="date"
+					   class="form-control">
+			</td>
+			<td>
+				<label>Data do Devolucao</label>
+				<input id="dataDevolucao"
+					   type="date"
+					   class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Valor (R$)</label>
+				<input id="valor"
+					   type="number"
+					   class="form-control"></input>
+			</td>
+			<td>
+				<label>Pago</label>
+				<input type="checkbox"
+					   id="pago"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Observacao</label>
+				<textarea id="obs"
+						  rows="8"
+						  cols="30"
+						  class = "form-control"></textarea>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="input-group">
+	<br>
+	<button id="cadastrar" type="button" 
+			onclick="cadastrarLocacao()"
+			class="btn btn-default gold">Cadastrar</button>
+</div>
+
+<!-- MODAL PERSONALIZADO -->
+<div id="modal-mensagens" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="modal-title" class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				<label id="modal-mensagem"></label>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="resources/js/midia.js"></script>
+<script src="resources/js/usuario.js"></script>

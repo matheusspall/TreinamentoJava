@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+
+button.btn.btn-default.gold{
+	background-color: #008080;
+	color: #FFFFFF;
+}
+
+input.form-control, select.form-control{
+	background-color: #c6c6ff;
+}
+
+table td{
+	padding: 5px;
+	border: 2px solid black;
+}
+
+table td.id{
+	background-color: #ffffff;
+	color: #9f9f9f;
+}
+
+table td.descricao{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+table td.cabecalho{
+	background-color: #009100;
+	color: #ffffff;
+	text-align: center;
+}
+
+#table-dados td{
+	border: 0px;
+	padding: 10px;
+	
+}
+
+#cadastrar-categoria, #listar-categoria, 
+#cadastrar-filme, #listar-filme, 
+#cadastrar-endereco, #listar-endereco,
+#cadastrar-tipo-midia, #listar-tipo-midia,
+#cadastrar-usuario, #listar-usuario,
+#cadastrar-midia, #listar-midia{
+	width: 200px;
+}

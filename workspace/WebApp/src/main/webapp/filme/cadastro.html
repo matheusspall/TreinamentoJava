@@ -1,0 +1,86 @@
+<div>
+	<h3>Cadastro de Filme</h3>
+	<br>
+</div>
+
+<div class="input-group">
+	
+	<table id="table-dados">
+		<tr>
+			<td>
+				<label>Descricao</label>
+				<input id="descricao"
+					   type="text" 
+					   class="form-control"></input>			
+			</td>
+			<td>
+				<label>Categoria</label> 
+				<select id = "categoria"
+						class = "form-control">
+					
+				</select>	
+			</td>
+			<td>
+				<label>Ano</label>
+				<input id="ano"
+					   type="number"
+					   class="form-control"></input>		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Classificacao</label>
+				<select id = "classificacao"
+						class = "form-control">
+					<option value = "0">Livre</option>
+					<option value = "10">10</option>
+					<option value = "12">12</option>
+					<option value = "14">14</option>
+					<option value = "16">16</option>
+					<option value = "18">18</option>
+				</select>
+			</td>
+			<td>
+				<label for="duracao">Duracao</label>
+				<input id="duracao"
+					   type="time"
+					   class="form-control"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Resumo</label>
+				<textarea id="resumo"
+						  rows="8"
+						  cols="30"
+						  class = "form-control"></textarea>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="input-group">
+	<br>
+	<button id="cadastrar" type="button" 
+			onclick="cadastrarFilme();"
+			class="btn btn-default gold">Cadastrar</button>
+</div>
+
+<!-- MODAL PERSONALIZADO -->
+<div id="modal-mensagens" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="modal-title" class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+				<label id="modal-mensagem"></label>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="resources/js/categoria.js"></script>
